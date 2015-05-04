@@ -36,6 +36,7 @@ namespace Hello
                 timer1.Enabled = false;
                 labelRemaining.Text = "0秒";
                 MessageBox.Show("時間です！！", "タイムアップ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                buttonStop.PerformClick();
             }
             else
             {
@@ -46,9 +47,11 @@ namespace Hello
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            if (textBoxTime.Text == "")
+            int dust;
+            if (int.TryParse(textBoxTime.Text,out dust) == false || textBoxTime.Text == "" || int.Parse(textBoxTime.Text) <= 0)
             {
-                MessageBox.Show("時間が指定されていません", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("指定時間が不正です", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxTime.Text = "";
             }
             else
             {
@@ -58,8 +61,17 @@ namespace Hello
                 labelRemaining.Text = textBoxTime.Text + "秒";
                 timer1.Interval = 1000;
                 timer1.Enabled = true;
-
+                textBoxTime.Text = "";
             }
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            textBoxTime.Text = "";
+            timer1.Enabled = false;
+            labelRemaining.Text = "";
+            buttonStart.Enabled = true;
+            buttonStop.Enabled = false;
         }
     }
 }

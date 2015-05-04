@@ -100,6 +100,7 @@
             this.buttonStop.TabIndex = 5;
             this.buttonStop.Text = "Stop";
             this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
             // 
             // label1
             // 
@@ -115,9 +116,8 @@
             this.labelRemaining.AutoSize = true;
             this.labelRemaining.Location = new System.Drawing.Point(89, 81);
             this.labelRemaining.Name = "labelRemaining";
-            this.labelRemaining.Size = new System.Drawing.Size(23, 12);
+            this.labelRemaining.Size = new System.Drawing.Size(0, 12);
             this.labelRemaining.TabIndex = 7;
-            this.labelRemaining.Text = "0秒";
             // 
             // Form1
             // 
