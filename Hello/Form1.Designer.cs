@@ -32,12 +32,12 @@
             this.buttonHello = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button_Exit = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxTime = new System.Windows.Forms.TextBox();
             this.label_Time = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelRemaining = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonHello
@@ -52,7 +52,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 5000;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // button_Exit
@@ -65,12 +65,12 @@
             this.button_Exit.UseVisualStyleBackColor = true;
             this.button_Exit.Click += new System.EventHandler(this.button_Exit_Click);
             // 
-            // textBox1
+            // textBoxTime
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 19);
-            this.textBox1.TabIndex = 2;
+            this.textBoxTime.Location = new System.Drawing.Point(91, 59);
+            this.textBoxTime.Name = "textBoxTime";
+            this.textBoxTime.Size = new System.Drawing.Size(181, 19);
+            this.textBoxTime.TabIndex = 2;
             // 
             // label_Time
             // 
@@ -89,6 +89,7 @@
             this.buttonStart.TabIndex = 4;
             this.buttonStart.Text = "Start";
             this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
             // 
             // buttonStop
             // 
@@ -109,26 +110,26 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "残り時間";
             // 
-            // label2
+            // labelRemaining
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 12);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "0秒";
+            this.labelRemaining.AutoSize = true;
+            this.labelRemaining.Location = new System.Drawing.Point(89, 81);
+            this.labelRemaining.Name = "labelRemaining";
+            this.labelRemaining.Size = new System.Drawing.Size(23, 12);
+            this.labelRemaining.TabIndex = 7;
+            this.labelRemaining.Text = "0秒";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelRemaining);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.label_Time);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxTime);
             this.Controls.Add(this.button_Exit);
             this.Controls.Add(this.buttonHello);
             this.Name = "Form1";
@@ -143,12 +144,12 @@
         private System.Windows.Forms.Button buttonHello;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button_Exit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxTime;
         private System.Windows.Forms.Label label_Time;
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelRemaining;
     }
 }
 
