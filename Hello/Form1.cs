@@ -21,5 +21,10 @@ namespace Hello
         {
             MessageBox.Show("Hello C#!!", "はじめまして");
         }
+
+        private void button_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
