@@ -16,5 +16,10 @@ namespace Hello
         {
             InitializeComponent();
         }
+
+        private void buttonHello_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hello C#!!", "はじめまして");
+        }
     }
 }
