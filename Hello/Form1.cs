@@ -19,10 +19,16 @@ namespace Hello
 
         private void buttonHello_Click(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
             MessageBox.Show("Hello C#!!", "はじめまして");
         }
 
         private void button_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
             Application.Exit();
         }

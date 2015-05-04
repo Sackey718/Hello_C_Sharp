@@ -44,6 +44,11 @@
             this.buttonHello.UseVisualStyleBackColor = true;
             this.buttonHello.Click += new System.EventHandler(this.buttonHello_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 5000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // button_Exit
             // 
             this.button_Exit.Location = new System.Drawing.Point(12, 135);
